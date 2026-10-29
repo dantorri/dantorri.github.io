@@ -1,232 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Daniel Torri | Robotics & Automation Portfolio</title>
-  <meta
-    name="description"
-    content="Daniel Torri's robotics, automation, embedded systems, and applied machine learning portfolio."
-  />
-
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daniel Torri — Robotics, machine learning &amp; underwater RF</title>
+  <meta name="description" content="Mechanical engineer and Virginia Tech graduate. Amphibious robots, underwater RF, humanoid locomotion, embedded control, and production automation.">
+  <meta name="theme-color" content="#f5f3ed">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Daniel Torri — Robotics, machine learning &amp; underwater RF">
+  <meta property="og:description" content="Robots on land, signals underwater, and the engineering in between. Projects by Daniel Torri.">
+  <meta property="og:url" content="https://dantorri.github.io/">
+  <meta property="og:image" content="https://dantorri.github.io/assets/amphibious-isometric.webp">
+  <meta property="og:image:alt" content="CAD assembly of a six-wheel amphibious robot with a powered front arm">
+  <link rel="canonical" href="https://dantorri.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/InstrumentSerif-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <a class="logo" href="#top">Daniel Torri</a>
-
-      <div class="nav-links">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="./" aria-label="Daniel Torri, home">Daniel Torri<span aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation"><a href="#projects">Work</a><a href="#about">About</a><a href="#contact">Contact</a><a class="external-link" href="https://github.com/dantorri">GitHub <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M3 13 13 3M3 3h10v10"/></svg></a></nav>
   </header>
-
-  <main id="top">
-    <section class="hero section">
-      <div class="hero-text">
-        <p class="eyebrow">Robotics • Automation • Embedded Systems • Applied ML</p>
-
-        <h1>Building practical robotic systems from code, controls, and hardware.</h1>
-
-        <p class="hero-subtitle">
-          I am a mechanical engineering student focused on robotics, manufacturing automation,
-          embedded control, simulation, and applied machine learning. I enjoy projects that connect
-          mechanical design, electronics, software, and real-world testing.
-        </p>
-
-        <div class="button-row">
-          <a class="button primary" href="https://github.com/dantorri" target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-          <a class="button secondary" href="#projects">
-            View Projects
-          </a>
-        </div>
+  <main id="main">
+    <section class="intro wrap" aria-labelledby="intro-title">
+      <div class="intro-copy">
+        <h1 id="intro-title">Daniel <br>Torri<span>.</span></h1>
+        <p class="intro-role">Mechanical engineer.<br>Robotics, controls &amp; machine learning.</p>
+        <p>I like working where software meets something physical. Lately, that means robots that cross land and water, learning to walk in simulation, and the problem of getting a radio signal through water.</p>
+        <a class="text-link" href="#projects">A few things I’ve worked on <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M10 3v14m-5-5 5 5 5-5"/></svg></a>
       </div>
-
-      <div class="hero-card">
-        <h2>Current Focus</h2>
-        <ul>
-          <li>Robotics portfolio organization</li>
-          <li>Reinforcement learning for simulated locomotion</li>
-          <li>Embedded control with Teensy, Arduino, ESP32, and Raspberry Pi</li>
-          <li>Manufacturing automation and robotic systems</li>
-        </ul>
-      </div>
+      <figure class="assembly-viewer">
+        <div class="assembly-image"><img id="assembly-image" src="assets/amphibious-isometric.webp" alt="Isometric CAD view of the amphibious robot, showing its six-wheel body and powered front arm" width="996" height="872" fetchpriority="high"></div>
+        <div class="assembly-controls" role="group" aria-label="CAD assembly view" hidden><button type="button" aria-pressed="true" data-view="isometric">Isometric</button><button type="button" aria-pressed="false" data-view="side">Side</button><button type="button" aria-pressed="false" data-view="top">Top</button></div>
+        <figcaption><span>Amphibious robot</span><span id="assembly-caption">CAD assembly · isometric view</span></figcaption>
+      </figure>
     </section>
 
-    <section id="projects" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Selected Work</p>
-        <h2>Featured Projects</h2>
-      </div>
-
-      <div class="project-grid">
-        <article class="project-card">
-          <h3>Reinforcement Learning Biped Simulation</h3>
-          <p>
-            Python-based reinforcement learning project focused on simulated biped and humanoid
-            locomotion using PPO and SAC-style workflows.
-          </p>
-          <div class="tag-row">
-            <span>Python</span>
-            <span>RL</span>
-            <span>PPO</span>
-            <span>SAC</span>
-          </div>
-          <a href="https://github.com/dantorri/ML_Biped" target="_blank" rel="noreferrer">
-            View repository →
-          </a>
-        </article>
-
-        <article class="project-card">
-          <h3>Amphibious Robotics</h3>
-          <p>
-            Senior design and robotics work focused on land-water mobility, treaded locomotion,
-            RF communication, waterproofing, and freshwater testing.
-          </p>
-          <div class="tag-row">
-            <span>Robotics</span>
-            <span>RF</span>
-            <span>Testing</span>
-            <span>CAD</span>
-          </div>
-          <a href="#contact">
-            Project page coming soon →
-          </a>
-        </article>
-
-        <article class="project-card">
-          <h3>ODrive-Powered Exoskeleton Testing</h3>
-          <p>
-            High-power robotic test system using ODrive motor controllers, torque commands,
-            linear rails, serial communication, and elastic energy storage.
-          </p>
-          <div class="tag-row">
-            <span>ODrive</span>
-            <span>ESP32</span>
-            <span>Torque Control</span>
-            <span>Motors</span>
-          </div>
-          <a href="#contact">
-            Project page coming soon →
-          </a>
-        </article>
-
-        <article class="project-card">
-          <h3>Automation and PLC-Style Logic</h3>
-          <p>
-            Arduino and PLC-style automation practice focused on industrial controls, sensors,
-            actuators, block logic, and manufacturing automation concepts.
-          </p>
-          <div class="tag-row">
-            <span>Arduino</span>
-            <span>PLC Logic</span>
-            <span>Automation</span>
-            <span>Controls</span>
-          </div>
-          <a href="#contact">
-            Project page coming soon →
-          </a>
-        </article>
-      </div>
+    <section class="work wrap" id="projects" aria-labelledby="work-title">
+      <div class="section-heading"><h2 id="work-title">On the bench.<br>In the simulator.</h2><p>Hardware, code, and the questions<br>that connect them.</p></div>
+      <article class="project-spread amphibious-feature">
+        <a class="project-image" href="projects/amphibious.html" aria-label="Read about the amphibious robot"><img src="assets/amphibious-side.webp" alt="Side view of the robot's wheeled chassis and arm mechanism in CAD" width="1530" height="842" loading="lazy"></a>
+        <div class="project-copy"><h3><a href="projects/amphibious.html">A robot for<br>both sides of the shoreline.</a></h3><p>A land-water robot with a powered front arm. My work connects RF and Wi-Fi communications, embedded motor control, and a separate learning-based study of obstacle traversal.</p><a class="text-link" href="projects/amphibious.html">Inside the project <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M3 10h14m-5-5 5 5-5 5"/></svg></a></div>
+      </article>
+      <article class="rf-feature" aria-labelledby="rf-title">
+        <div class="rf-copy"><h3 id="rf-title"><a href="projects/underwater-rf.html">What happens to the link<br>when the robot goes under?</a></h3><p>The communications problem deserves its own page. I investigated low-frequency RF, antenna placement, and electrical noise as part of the amphibious robot’s telemetry work.</p><a class="text-link" href="projects/underwater-rf.html">Underwater RF notes <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M3 10h14m-5-5 5 5-5 5"/></svg></a></div>
+        <div class="link-study"><svg class="rf-diagram" viewBox="0 0 440 280" role="img" aria-labelledby="rf-diagram-title"><title id="rf-diagram-title">Conceptual system diagram: base station above the surface, receiver on the robot below. Not measured propagation data.</title><path class="surface" d="M20 126H420"/><path class="diagram-stroke" d="M88 56v46m-20 0h40M78 65l10-10 10 10M88 82h45"/><circle class="diagram-node" cx="88" cy="55" r="4"/><path class="signal-path" d="M133 82h118v113h39"/><path class="diagram-stroke" d="M295 178h82v43h-82zM333 178v-22m-9 0h18"/><circle class="diagram-node" cx="333" cy="156" r="4"/><text x="39" y="37">BASE STATION</text><text x="23" y="119">SURFACE</text><text x="300" y="245">ROBOT</text><text x="267" y="103">RF LINK?</text></svg><p>System concept. No measured range implied.</p></div>
+      </article>
+      <article class="project-spread learning-feature">
+        <figure class="gait-figure"><div class="gait-media"><img src="assets/walking-poster.webp" data-poster="assets/walking-poster.webp" data-animation="assets/walking-gait.webp" alt="Booster T1 humanoid walking in the team's PyBullet simulation" width="400" height="300" loading="lazy"><button class="play-control" type="button" aria-pressed="false" hidden><svg aria-hidden="true" viewBox="0 0 20 20"><path d="m7 4 9 6-9 6Z"/></svg><span>Play gait</span></button></div><figcaption>Final SAC policy · PyBullet simulation</figcaption></figure>
+        <div class="project-copy"><h3><a href="projects/locomotion.html">Teaching a humanoid<br>to stay on its feet.</a></h3><p>Comparing PPO and SAC on a 13-DoF walking task. SAC reached about 1.6 m/s in simulation; PPO’s early steps never became a sustained gait within the project timeline.</p><a class="text-link" href="projects/locomotion.html">The gait, the results, the caveats <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M3 10h14m-5-5 5 5-5 5"/></svg></a></div>
+      </article>
+      <div class="other-work"><h3>A few more threads</h3><div class="project-index">
+        <details><summary><span>Jumping exoskeleton test frame</span><span class="index-category">Assistive robotics</span></summary><div class="detail-copy"><p>At Virginia Tech’s Assistive Robotics Lab, I designed and prototyped a constrained linear frame for a high-power jumping exoskeleton and assisted with underactuated mechanisms. The work brought mechanical test fixtures, motor control, and elastic energy storage into the same system.</p><p class="note">Undergraduate research · August 2024–May 2026</p></div></details>
+        <details><summary><span>5-DoF robotic arm</span><span class="index-category">Kinematics &amp; vision</span></summary><div class="detail-copy"><p>I implemented forward and inverse kinematics for a five-degree-of-freedom arm with a gripper, then explored OpenCV feedback for target alignment. The vision control was an attempted extension, rather than a validated closed-loop result.</p><p class="note">November 2025–February 2026</p></div></details>
+        <details><summary><span>Quadrotor &amp; flight systems</span><span class="index-category">ArduPilot</span></summary><div class="detail-copy"><p>A 3DR Quad Zero build using ArduPilot, with flight-controller and telemetry tuning and exploration of companion-computer mission planning. Earlier work at Virginia Tech MAAP included MATLAB viewshed tools and C++ spectrum-data logging.</p><p class="note">FAA Part 107 remote pilot · Certified 2023</p></div></details>
+        <details><summary><span>TarsiGrip</span><span class="index-category">Capillary adhesion</span></summary><div class="detail-copy"><p>A reusable capillary gripper concept that stores and meters its own water. The work includes contact mechanics, parametric concept CAD, and repeatable attachment-and-release test specifications.</p><p class="note">Analytical and concept development. Calculated forces are conditional predictions; a working load has not been measured on a fabricated prototype.</p></div></details>
+      </div></div>
     </section>
 
-    <section id="skills" class="section split-section">
-      <div>
-        <p class="eyebrow">Toolbox</p>
-        <h2>Technical Skills</h2>
-        <p>
-          My strongest interests are in projects that combine software, electronics, mechanical
-          design, testing, and control systems.
-        </p>
-      </div>
-
-      <div class="skills-grid">
-        <div>
-          <h3>Programming</h3>
-          <p>Python, C/C++, MATLAB, Java, JavaScript</p>
-        </div>
-
-        <div>
-          <h3>Embedded Systems</h3>
-          <p>Teensy, Arduino, ESP32, Raspberry Pi, I2C, UART, PWM</p>
-        </div>
-
-        <div>
-          <h3>Robotics & Controls</h3>
-          <p>ODrive, motor drivers, encoders, IMUs, PID, torque control, simulation</p>
-        </div>
-
-        <div>
-          <h3>Prototyping</h3>
-          <p>CAD, 3D printing, manual mill/lathe, soldering, test fixtures</p>
-        </div>
-      </div>
+    <section class="about wrap" id="about" aria-labelledby="about-title">
+      <div class="about-intro"><h2 id="about-title">A little background.</h2><p class="large-copy">I came to robotics through mechanical engineering. The software kept getting more interesting.</p><p>I graduated from Virginia Tech in May 2026 with a B.S. in Mechanical Engineering, a major in Robotics and Mechatronics, and a minor in Computer Science. I’m interested in the whole system: mechanisms, electronics, control, and the code that makes it move.</p><p>Outside individual projects, I’ve led mechanical design and mentored younger builders in Virginia Tech’s Competitive Robotics Organization. Our 2024 SoutheastCon team took first in hardware and design.</p></div>
+      <div class="experience-list"><article><h3>Boeing</h3><p class="role">Production automation &amp; manufacturing R&amp;D internship</p><p>AGV-mounted robot upgrades, Universal Robots cobot concepts, supplier defect analysis with 3D scanning and CMM tools, and passive exoskeleton integration trials.</p></article><article><h3>Assistive Robotics Lab</h3><p class="role">Undergraduate research · 2024–2026</p><p>Test-frame design and prototyping for a high-power jumping exoskeleton, with work on underactuated systems.</p></article><article><h3>Virginia Tech MAAP</h3><p class="role">Drone test &amp; research internship · 2023–2024</p><p>MATLAB viewshed analysis, C++ spectrum-data logging, and shared technical tools for drone research.</p></article></div>
+      <div class="toolbox"><h3>Tools I work with</h3><p><strong>Code &amp; learning</strong> Python, C++, MATLAB, PyBullet, MuJoCo, Stable-Baselines3</p><p><strong>Hardware &amp; design</strong> SOLIDWORKS, Fusion 360, Siemens NX, Onshape, ESP32, Arduino, Raspberry Pi, ODrive, 3D printing</p></div>
     </section>
-
-    <section id="experience" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Background</p>
-        <h2>Engineering Direction</h2>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <h3>Robotics and Automation</h3>
-          <p>
-            Focused on robotic systems that connect mechanical design, embedded control,
-            manufacturing automation, sensing, and real-world validation.
-          </p>
-        </div>
-
-        <div class="timeline-item">
-          <h3>Applied Machine Learning</h3>
-          <p>
-            Exploring reinforcement learning and robot learning workflows through simulation,
-            training scripts, evaluation, and project documentation.
-          </p>
-        </div>
-
-        <div class="timeline-item">
-          <h3>Portfolio Development</h3>
-          <p>
-            Organizing GitHub repositories into clean, readable projects that show code,
-            engineering decisions, test results, and lessons learned.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact-section">
-      <p class="eyebrow">Contact</p>
-      <h2>Let’s connect.</h2>
-      <p>
-        I am building this portfolio as a central place for my robotics, automation,
-        embedded systems, and applied machine learning projects.
-      </p>
-
-      <div class="button-row">
-        <a class="button primary" href="https://github.com/dantorri" target="_blank" rel="noreferrer">
-          GitHub Profile
-        </a>
-        <a class="button secondary" href="mailto:">
-          Email coming soon
-        </a>
-      </div>
-    </section>
+    <section class="contact" id="contact" aria-labelledby="contact-title"><div class="wrap contact-inner"><h2 id="contact-title">Have a robot problem?</h2><div><p>I’m happy to talk robotics, research,<br>or something that refuses to work.</p><a class="contact-email" href="mailto:danieltorri@vt.edu">danieltorri@vt.edu <svg aria-hidden="true" viewBox="0 0 20 20"><path d="M4 16 16 4M4 4h12v12"/></svg></a></div></div></section>
   </main>
-
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Daniel Torri. Built with GitHub Pages.</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <footer class="site-footer wrap"><p>Daniel Torri · <span id="year">2026</span></p><a href="https://github.com/dantorri">More code on GitHub <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M3 13 13 3M3 3h10v10"/></svg></a><a href="#main">Back to top</a></footer>
 </body>
 </html>
